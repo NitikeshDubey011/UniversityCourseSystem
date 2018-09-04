@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StudentView">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center_horizontal"
+        android:text="@string/welcome_to_coast_university"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="125dp">
+
+        <TextView
+            android:id="@+id/nameOfCurrentStudent"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="8dp"
+            android:layout_toLeftOf="@+id/logout"
+            android:layout_toStartOf="@+id/logout"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/name_of_student"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button"
+            android:text="@string/logout"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/imagesAt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+        tools:layout_editor_absoluteX="10dp">
+
+        <TextView
+            android:id="@+id/studentNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student Name : "
+            android:textColor="#000"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/studentName2TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Student Name"
+            android:textColor="#000"
+            android:textSize="17sp" />
+
+        <View
+            android:id="@+id/upperBound"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/studentCourseTV"
+            android:layout_marginTop="10dp"
+            android:background="#000" />
+
+        <TextView
+            android:id="@+id/studentCourseTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="Student Course : "
+            android:textColor="#000"
+            android:textSize="17sp" />
+
+
+        <ListView
+            android:id="@+id/studentCourse2TV"
+            android:layout_width="wrap_content"
+            android:layout_height="171dp"
+            android:layout_below="@+id/studentNameTV"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/studentCourseTV"
+            android:divider="#000"
+            android:dividerHeight="1dp"
+            android:footerDividersEnabled="false"
+            android:padding="10dp"
+            android:textSize="17sp" />
+
+
+        <View
+            android:id="@+id/lowerBound"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/studentCourse2TV"
+            android:layout_marginTop="10dp"
+            android:background="#000" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="25dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <Button
+            android:id="@+id/enroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:text="@string/enroll_for_course"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/add_time_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:text="@string/add_time_table"
+            android:textColor="@android:color/white" />
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
